@@ -1,0 +1,37 @@
+{
+  "name": "DNN",
+  "packages": [
+    "tensorflow"
+  ]
+  ,
+  "layers": {
+    "inputs":{
+      "component": "tensorflow.keras.layers.Input",
+      "shape": [28,28]
+    },
+    "flatten": {
+      "component": "tensorflow.keras.layers.Flatten"
+    },
+    "layer1": {
+      "component": "tensorflow.keras.layers.Dense",
+      "units": 128,
+      "activation":"relu"
+    },
+    "dropout": {
+      "component": "tensorflow.keras.layers.Dropout",
+      "rate": 0.2
+    },
+    "layer2": {
+      "component": "tensorflow.keras.layers.Dense",
+      "units": 10,
+      "activation": "softmax"
+    }
+  },
+  "heads": ["inputs"],
+  "connections": {
+    "inputs": ["flatten"],
+    "flatten": ["layer1"],
+    "layer1": ["dropout"],
+    "dropout": ["layer2"]
+  }
+}
