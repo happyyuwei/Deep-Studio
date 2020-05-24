@@ -1,24 +1,23 @@
 package org.deepstudio;
 
 
+import com.alibaba.fastjson.JSON;
 import org.deepstudio.compile.Compiler;
-import org.deepstudio.compile.Parser;
 import org.deepstudio.compile.PythonPage;
+import org.deepstudio.compile.StructureParser;
 import org.deepstudio.structure.DeepStructure;
+import org.deepstudio.ui.FloatingWindow;
 import org.deepstudio.ui.Window;
 import org.deepstudio.util.FileUtil;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Main {
 
     public static void main(String[] args) throws Exception{
 
 
-        DeepStructure d=new DeepStructure(FileUtil.readToString("example.json"));
+//        DeepStructure d=new DeepStructure(FileUtil.readToString("residual.json"));
 //        List<Object> l= (List<Object>) d.getLayers().get("inputs").getArg("shape");
 //        System.out.println(l.get(0).getClass());
 //        System.out.println(Compiler.generateFunctionLine("make_DNN_model", new String[]{"a","b"}));
@@ -45,10 +44,17 @@ public class Main {
 //        System.out.println(Compiler.generateReturnLine(new String[]{"a","v","c"}));
 //        Object a=new int[]{1,2,3,4};
 //        System.out.println(a instanceof int[]);
+//
+//
+//        PythonPage p =StructureParser.parseStructure(d);
+//        Compiler.compileToFile(p,".");
 
-
-        PythonPage p =Parser.parseStructure(d);
-        Compiler.compileToFile(p,".");
+//        FloatingWindow f=new FloatingWindow();
+//
+//        f.setVisible(true);
+//        Bootstrap b=new Bootstrap();
+//        Explorer.getInstance().createWorkspace("first","C:\\Users\\happy\\Desktop");
+        Bootstrap.start();
 
     }
 

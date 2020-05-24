@@ -13,12 +13,21 @@ import com.alibaba.fastjson.*;
  */
 public class DeepStructure {
 
+    //模型函数名称
     final public static String JSON_NAME="name";
+    //模型使用的组件包
     final public static String JSON_PACKAGES="packages";
+    //输入的参数
+    final public static String JSON_ARGS="args";
+    //包含的层，为一个hashmap, key为层名称，value为该层具体信息
     final public static String JSON_LAYERS="layers";
+    //各层连接方式，为邻接表
     final public static String JSON_CONNECTIONS="connections";
+    //第一层名称
     final public static String JSON_HEADS="heads";
+    //组件名
     final public static String JSON_COMPONENT="component";
+
 
 
     //定义层数结构
@@ -31,6 +40,8 @@ public class DeepStructure {
     final private List<String> packageList;
     //名称
     final private String name;
+    //输入参数
+    final private List<String> args;
 
     /**
      *
@@ -44,6 +55,8 @@ public class DeepStructure {
         JSONObject jsonObject=JSONObject.parseObject(json);
         //解析名称
         this.name=jsonObject.getString(DeepStructure.JSON_NAME);
+        //解析传入参数
+        this.args=jsonObject.getJSONArray(DeepStructure.JSON_ARGS).toJavaList(String.class);
 
         //解析头节点
         this.headList=jsonObject.getJSONArray(DeepStructure.JSON_HEADS).toJavaList(String.class);
@@ -118,5 +131,9 @@ public class DeepStructure {
 
     public String getName() {
         return name;
+    }
+
+    public List<String> getArgs() {
+        return args;
     }
 }

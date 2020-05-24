@@ -23,7 +23,7 @@ public class PythonFunction {
     private List<String> processTypeList;
 
     //非指定参数列表，类似 function(a,b,c)
-    private List<List<String>> invokeNonParamList;
+    private List<List<Object>> invokeNonParamList;
 
     //指定变量名列表，类似 function(x=a,y=b)
     private List<Map<String,Object>> invokeParamList;
@@ -48,7 +48,7 @@ public class PythonFunction {
     }
 
     /**
-     * 添加参数
+     * 添加参数，如果存在多个参数，则分别调用该函数
      * @param arg 参数
      */
     public void addArg(String arg){
@@ -66,7 +66,7 @@ public class PythonFunction {
      * @param params 命名参数
      * @param returnName 返回值
      */
-    public void invokeProcess(String functionName, String processType, List<String> nonParams, Map<String, Object> params, String[] returnName){
+    public void invokeProcess(String functionName, String processType, List<Object> nonParams, Map<String, Object> params, String[] returnName){
         this.invokeList.add(functionName);
         this.invokeParamList.add(params);
         this.invokeNonParamList.add(nonParams);
@@ -99,7 +99,7 @@ public class PythonFunction {
         return invokeReturnList;
     }
 
-    public List<List<String>> getInvokeNonParamList() {
+    public List<List<Object>> getInvokeNonParamList() {
         return invokeNonParamList;
     }
 

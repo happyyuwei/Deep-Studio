@@ -4,10 +4,11 @@
     "tensorflow"
   ]
   ,
+  "args": ["input_shape"],
   "layers": {
     "inputs":{
       "component": "tensorflow.keras.layers.Input",
-      "shape": [28,28]
+      "shape": "var:input_shape"
     },
     "flatten": {
       "component": "tensorflow.keras.layers.Flatten"
@@ -32,6 +33,7 @@
     "inputs": ["flatten"],
     "flatten": ["layer1"],
     "layer1": ["dropout"],
-    "dropout": ["layer2"]
+    "dropout": ["layer2"],
+    "layer2": []
   }
 }

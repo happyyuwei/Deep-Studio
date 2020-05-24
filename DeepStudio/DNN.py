@@ -1,7 +1,7 @@
 import tensorflow
-def make_DNN_model():
+def make_DNN_model(input_shape):
     flatten=tensorflow.keras.layers.Flatten()
-    inputs=tensorflow.keras.layers.Input(shape=[28,28])
+    inputs=tensorflow.keras.layers.Input(shape=input_shape)
     dropout=tensorflow.keras.layers.Dropout(rate=0.2)
     layer1=tensorflow.keras.layers.Dense(units=128,activation="relu")
     layer2=tensorflow.keras.layers.Dense(units=10,activation="softmax")
@@ -13,7 +13,7 @@ def make_DNN_model():
     _model=tensorflow.keras.Model(outputs=_output_layer2,inputs=inputs)
     return _model
 def _test():
-    _model=make_DNN_model()
+    _model=make_DNN_model([28,28,3])
     _model.summary()
     
 if __name__=='__main__':

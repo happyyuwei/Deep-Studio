@@ -65,7 +65,7 @@ public class Compiler {
             //函数过程
             List<String> invokeList = pythonFunction.getInvokeList();
             //获取不带标识的参数列表，如 function(1)
-            List<List<String>> invokeNonParamList = pythonFunction.getInvokeNonParamList();
+            List<List<Object>> invokeNonParamList = pythonFunction.getInvokeNonParamList();
             //获取带表示的参数列表，如function(a=1,b=2)
             List<Map<String, Object>> invokeParamList = pythonFunction.getInvokeParamList();
             //获取返回列表
@@ -224,7 +224,7 @@ public class Compiler {
      * @param returnName   返回值
      * @return 字符串
      */
-    public static String generateInvokeLine(String functionName, List<String> nonParams, Map<String, Object> params, String[] returnName) {
+    public static String generateInvokeLine(String functionName, List<Object> nonParams, Map<String, Object> params, String[] returnName) {
 
         String paramsString = null;
 

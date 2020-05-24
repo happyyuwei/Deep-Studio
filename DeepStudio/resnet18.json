@@ -1,0 +1,30 @@
+{
+  "name": "resnet18",
+  "packages": [
+    "tensorflow"
+  ],
+  "args": [],
+  "layers": {
+    "inputs": {
+      "component": "tensorflow.keras.layers.Input",
+      "shape": [
+        128,
+        128
+      ]
+    },
+    "conv1":{
+      "component": "tensorflow.keras.layers.Conv2D",
+      "filters": 64,
+      "kernel_size": 7,
+      "strides": 2
+    },
+    "pooling1": {
+      "component": "tensorflow.keras.layers.MaxPool2D"
+    }
+  },
+  "heads": ["inputs"],
+  "connections": {
+    "inputs": ["conv1"],
+    "conv1": ["pooling1"]
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "name": "residual",
+  "packages": [
+    "tensorflow"
+  ],
+  "args": ["input_width", "input_height","input_channel"],
+  "layers": {
+    "inputs": {
+      "component": "tensorflow.keras.layers.Input",
+      "shape": ["var:input_width","var:input_height","var:input_channel"]
+    },
+    "conv1":{
+      "component": "tensorflow.keras.layers.Conv2D",
+      "filters": "var:input_channel",
+      "kernel_size": 3,
+      "strides": 1,
+      "padding": "same"
+    },
+    "relu1": {
+      "component": "tensorflow.keras.layers.ReLU"
+    },
+    "conv2":{
+      "component": "tensorflow.keras.layers.Conv2D",
+      "filters": "var:input_channel",
+      "kernel_size": 3,
+      "strides": 1,
+      "padding": "same"
+    },
+    "relu2": {
+      "component": "tensorflow.keras.layers.ReLU"
+    },
+    "add": {
+      "component": "tensorflow.keras.layers.Add"
+    },
+    "relu3": {
+      "component": "tensorflow.keras.layers.ReLU"
+    }
+  },
+  "heads": ["inputs"],
+  "connections": {
+    "inputs": ["conv1","add"],
+    "conv1": ["relu1"],
+    "relu1": ["conv2"],
+    "conv2": ["relu2"],
+    "relu2": ["add"],
+    "add": ["relu3"],
+    "relu3": []
+  }
+}

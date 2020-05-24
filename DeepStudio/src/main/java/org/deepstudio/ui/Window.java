@@ -36,10 +36,10 @@ public class Window extends JFrame{
         super.setVisible(true);
     }
 
-    public static void main(String[] args){
-        Window window=new Window();
-
-    }
+//    public static void main(String[] args){
+//        Window window=new Window();
+//
+//    }
 
 
 

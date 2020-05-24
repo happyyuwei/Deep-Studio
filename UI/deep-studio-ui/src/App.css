@@ -1,0 +1,125 @@
+.logo {
+  height         : 32px;
+  background     : rgba(255, 255, 255, 0.2);
+  margin         : 8px;
+  color          : #fff;
+  text-decoration: none;
+  display        : flex;
+  flex-direction : column;
+  /*元素的排列方向为垂直*/
+  justify-content: center;
+  /*水平居中对齐*/
+  align-items    : center;
+  /*垂直居中对齐*/
+  font-size      : larger;
+  font-weight    : bolder;
+}
+
+.logo-appear {
+  height         : 32px;
+  background     : rgba(255, 255, 255, 0.2);
+  margin         : 8px;
+  color          : #fff;
+  text-decoration: none;
+  pointer-events: none;
+  display        : flex;
+  flex-direction : column;
+  /*元素的排列方向为垂直*/
+  justify-content: center;
+  /*水平居中对齐*/
+  align-items    : center;
+  /*垂直居中对齐*/
+  font-size      : larger;
+  font-weight    : bolder;
+  /* logo 出现动画 */
+  animation      : logoAnimate 1.5s;
+
+}
+
+@keyframes logoAnimate {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* 固定测栏样式 */
+.fixed-sider {
+  overflow: auto;
+  height  : 100vh;
+  position: fixed;
+  left    : 0,
+}
+
+ 
+
+
+.card-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.create-card{
+  width: 500px;
+  margin-top: 20vh;
+}
+
+
+.open-card{
+  width: 500px;
+  margin-top: 10vh;
+}
+
+.recent-card{
+  width:500px;
+}
+
+
+.app-card-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.app-create-card{
+  width: 500px;
+  margin-top: 5vh;
+}
+
+
+.app-recent-card{
+  width:500px;
+}
+
+.console{
+  height: 100%;
+  width: 100%;
+  /* color: "#fff";
+  background-color: "#012456" */
+}
+
+/* 引导页 */
+.logo-container {
+  text-align     : center;
+  display        : flex;
+  flex-direction : column;
+  align-items    : center;
+  justify-content: center;
+}
+
+.App-logo {
+  margin-top    : 20vh;
+  width         : 60wh;
+  /* 无法用鼠标点击该图片，也无法保存 */
+  pointer-events: none;
+
+
+}
+
+.power-logo{
+  width:30px;
+}
