@@ -1,3 +1,4 @@
 #不需要构建的目录
 dist
+#Eidolon 是单独的项目，不需要在此上传
 Eidolon-Tensorflow/
