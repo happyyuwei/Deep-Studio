@@ -3,6 +3,7 @@ package org.deepstudio;
 import com.alibaba.fastjson.JSON;
 import org.deepstudio.api.SessionManager;
 import org.deepstudio.api.WebApi;
+import org.deepstudio.ui.FloatingWindow;
 import org.deepstudio.util.FileUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -39,6 +40,11 @@ public class Bootstrap {
         //创建web接口
         WebApi.run();
         logger.info("Web API started.");
+
+        //懸浮UI啟動
+        FloatingWindow floatingWindow=new FloatingWindow();
+        floatingWindow.setVisible(true);
+        logger.info("Floating UI started.");
     }
 
 }

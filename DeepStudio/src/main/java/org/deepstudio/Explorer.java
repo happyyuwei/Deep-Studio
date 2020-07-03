@@ -90,8 +90,14 @@ public class Explorer {
     private Explorer() {
         try {
             //解析缓存
-            String cacheJson = FileUtil.readToString(cachePath);
-            this.cache = JSON.parseObject(cacheJson, Cache.class);
+            try {
+                //当存在缓存文件，则读取缓存
+                String cacheJson = FileUtil.readToString(cachePath);
+                this.cache = JSON.parseObject(cacheJson, Cache.class);
+            }catch (Exception exc){
+                //若不存在缓存，则启动新缓存。此语句用于第一次启动程序时使用。
+                this.cache=new Cache();
+            }
             //如果第一次打开，则不需要
             if (this.cache.getLastWorkspace() != null) {
                 //检查工作区路径是否存在
@@ -102,7 +108,7 @@ public class Explorer {
                     logger.info("Workspace not found. path=" + this.cache.getLastWorkspace());
                 }
             } else {
-                logger.info("No workspace found, start create panel.");
+                logger.info("No workspace found, start new panel.");
             }
             //更新缓存
             this.updateRecentWorkspace();

@@ -68,4 +68,7 @@ print("Eidolon moved to dist")
 shutil.copytree(os.path.join(".", "DeepStudio","drawable"), os.path.join(".","dist","drawable"))
 print("drawable moved to dist")
 
+with open("./dist/start.bat", "w") as f:
+    f.writelines(["javaw -jar DeepStudio.jar\n","exit"])
+
 print("Build Success.")

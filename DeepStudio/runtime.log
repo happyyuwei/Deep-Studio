@@ -1,0 +1,45 @@
+2020-05-26 23:13:37 ERROR LoggingFailureAnalysisReporter:40 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2020-05-26 23:18:50 INFO  Explorer:111 - No workspace found, start new panel.
+2020-05-26 23:18:50 INFO  Explorer:118 - Cache freshed.
+2020-05-26 23:18:50 INFO  Bootstrap:26 - Explorer started.
+2020-05-26 23:18:50 INFO  Bootstrap:34 - Console started.
+2020-05-26 23:18:50 INFO  Bootstrap:38 - Session manager started.
+2020-05-26 23:18:50 INFO  Version:21 - HV000001: Hibernate Validator 6.0.19.Final
+2020-05-26 23:18:51 INFO  Main:55 - Starting Main on LAPTOP-2JOMCULP with PID 18624 (C:\Users\happy\Desktop\Deep Studio\DeepStudio\target\classes started by happy in C:\Users\happy\Desktop\Deep Studio\DeepStudio)
+2020-05-26 23:18:51 INFO  Main:651 - No active profile set, falling back to default profiles: default
+2020-05-26 23:18:52 INFO  TomcatWebServer:91 - Tomcat initialized with port(s): 8080 (http)
+2020-05-26 23:18:52 INFO  ContextLoader:284 - Root WebApplicationContext: initialization completed in 1591 ms
+2020-05-26 23:18:53 INFO  ThreadPoolTaskExecutor:181 - Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-26 23:18:53 INFO  WelcomePageHandlerMapping:54 - Adding welcome page: class path resource [static/index.html]
+2020-05-26 23:18:53 INFO  TomcatWebServer:203 - Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-26 23:18:53 INFO  Main:61 - Started Main in 2.61 seconds (JVM running for 3.328)
+2020-05-26 23:18:53 INFO  Bootstrap:42 - Web API started.
+2020-05-26 23:22:31 INFO  Explorer:111 - No workspace found, start new panel.
+2020-05-26 23:22:31 INFO  Explorer:118 - Cache freshed.
+2020-05-26 23:22:31 INFO  Bootstrap:26 - Explorer started.
+2020-05-26 23:22:31 INFO  Bootstrap:34 - Console started.
+2020-05-26 23:22:31 INFO  Bootstrap:38 - Session manager started.
+2020-05-26 23:22:32 INFO  Version:21 - HV000001: Hibernate Validator 6.0.19.Final
+2020-05-26 23:22:32 INFO  Main:55 - Starting Main on LAPTOP-2JOMCULP with PID 8780 (C:\Users\happy\Desktop\Deep Studio\DeepStudio\target\classes started by happy in C:\Users\happy\Desktop\Deep Studio\DeepStudio)
+2020-05-26 23:22:32 INFO  Main:651 - No active profile set, falling back to default profiles: default
+2020-05-26 23:22:33 INFO  TomcatWebServer:91 - Tomcat initialized with port(s): 8080 (http)
+2020-05-26 23:22:34 INFO  ContextLoader:284 - Root WebApplicationContext: initialization completed in 1612 ms
+2020-05-26 23:22:34 INFO  ThreadPoolTaskExecutor:181 - Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-26 23:22:34 INFO  WelcomePageHandlerMapping:54 - Adding welcome page: class path resource [static/index.html]
+2020-05-26 23:22:34 INFO  TomcatWebServer:203 - Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-26 23:22:34 INFO  Main:61 - Started Main in 2.62 seconds (JVM running for 3.326)
+2020-05-26 23:22:34 INFO  Bootstrap:42 - Web API started.
+2020-05-26 23:22:35 INFO  Bootstrap:47 - Floating UI started.
